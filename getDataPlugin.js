@@ -1,4 +1,9 @@
 (function(){
+	/*
+		添加在分支2.0.0上
+
+
+	*/
 	var choiceDate=function(param){
 		this.initDate=new Date();
 		this.default={
