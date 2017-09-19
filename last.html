@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>日期选择</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		html,body{width: 100%;height: 100%}
+		#date{
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			padding-top: 40px
+
+		}
+		#fbox{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+		.fbox2,.ul{overflow: hidden;margin-top: 5px;}
+		.title{position: fixed;height: 40px;left: 0;top: 0;background: #40bbe2;width: 100%;}
+		.title li{width: 14.2857%;float: left;height: 40px;line-height: 40px;text-align: center;color: #fff;font-size: 12px;list-style: none;}
+		.fbox2{width: 100%;overflow: hidden;}
+		span{display: block;width: 14.2857%;height: 40px;box-sizing: border-box;float: left;font-size: 12px;text-align: center;position: relative;padding-top: 5px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+		span>div{width: 100%;height: 22px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+		span>div.startClass{height: 18px;line-height: 18px;font-size: 12px;text-align: center;}
+		span>div a{display: block;width: 22px;height: 22px;margin: 0 auto;line-height: 22px;text-align: center;font-size: 1rem;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+		.monTitle{height: 30px;line-height: 30px;text-align: center;border: 1px solid #ccc;border-left: 0;border-right: 0;}
+		.normal a{color: #333;}
+		.today{color: #875b94;}
+		.today div:nth-child(1){display: block;}
+		.today div:nth-child(2){display: none;}
+		.choicetoday div:nth-child(1){display: none;}
+		.choicetoday div:nth-child(2){display: block;}
+		.weekday a{color:#0066c0;}
+		.disabled a{color:#ccc;}
+		.start a{background: #40bbe2;color: #fff;border-radius: 50%}
+		.linkStart .link{background: #40bbe2;border-radius: 11px 0 0 11px;}
+		.end a{background: #40bbe2;color: #fff;border-radius: 50%}
+		.linkend .link{background: #40bbe2;border-radius: 0 11px 11px 0;}
+		.choiced .link{background: #40bbe2;}
+		.choiced div a{color: #fff;}
+	</style>
+	<script type="text/javascript" src="getDataOver.js"></script>
+</head>
+<body>
+	<div id="date">
+		<ul class="title"><li id="ddd">日</li><li>一</li><li>二</li><li>三</li><li>四</li><li>五</li><li>六</li></ul>
+		<div id="box"></div>
+	</div>
+</body>
+	
+	<script type="text/javascript">
+	window.onload=function(){
+		var c=new choiceDate();
+		console.log(c);
+		// setInterval(function(){
+		// 	var a=c.returnData();
+		// 	console.log(a);
+		// },30000);
+
+
+		var t=document.querySelector("#ddd");
+		t.addEventListener("click",function(){
+			var a=c.returnData();
+			console.log(a);
+		},false);
+
+	}
+	</script>
+
+</html>
